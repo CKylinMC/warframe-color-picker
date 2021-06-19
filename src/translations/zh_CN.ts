@@ -2,7 +2,7 @@ import headerLayoutsImage from "../assets/choose-your-fighter.svg"
 import suggestions from "../assets/SUGGESTIONS.svg"
 import headerSchemeImportImage from "../assets/scheme-import-en.svg";
 
-const cn = {
+const zh_CN = {
   layoutSelection: {
     headerImage: headerLayoutsImage,
     headerText: "选择是要使用扩展布局还是原始的经典布局。",
@@ -55,11 +55,11 @@ const cn = {
     currentScheme: "当前方案",
     newScheme: "新方案",
     confirm: "确定",
-    bottomText: "别担心: 离开此页面不会丢失你当前的配色方案。"
+    bottomText: "请放心，直接离开此页面不会丢失你当前已有的配色方案。"
   },
   colorPicker: {
     targetScheme: {
-      targetScheme: "目标配色方案",
+      targetScheme: "当前配色方案",// current scheme
       default: "标准模式",
       manual: "多色板模式",
       primary: "主要颜色",
@@ -70,7 +70,7 @@ const cn = {
       energy: "能量颜色 1, 2",
       import: "导入",
       export: "导出",
-      copied: "已复制分享链接！"
+      copied: "已复制"
     },
     suggestions: {
       suggestions: suggestions,
@@ -78,7 +78,7 @@ const cn = {
       palettes: "色板",
     },
     selectedColor: {
-      selectedColor: "选中的颜色",
+      selectedColor: "当前选中颜色",//current selected color
     },
     howToUse: "使用方法",
     motd: `Join our Discord at: discord.gg/WWBYuY3! This place is not only limited to Warframe, so feel free to hop in
@@ -131,4 +131,4 @@ const cn = {
   }
 }
 
-export default cn
+export default zh_CN
