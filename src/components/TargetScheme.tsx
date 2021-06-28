@@ -32,7 +32,14 @@ const TargetScheme = (
 
   const onExportClick = async () => {
     try {
-      const hexColors = paletteColors.map(color => color ? Color(color).hex() : "")
+      let hexColors:string[]
+      if(switched) hexColors = paletteColors.map(color => color ? Color(color).hex() : "")
+      else {
+        hexColors = []
+        const rowStart = Math.floor(selectedCell / 8)
+        for(let i=0;i<rowStart;i++) hexColors = hexColors.concat(["","","","","","","",""])
+        hexColors = hexColors.concat(paletteColors.slice(rowStart * 8, Math.floor(selectedCell / 8 + 1) * 8).map(color => color ? Color(color).hex() : ""))
+      }
       const exportUrl = await urlColors.savePalette({name: "defname", colors: hexColors})
       await navigator.clipboard.writeText(exportUrl)
       setCopied(true)
