@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Color from "color";
 import {Window} from "./shared/Window";
 import {FlexColumnCenter} from "./shared/FlexColumnCenter";
-import styled, {css} from "styled-components/macro";
+import styled, {css} from "styled-components";
 import {Divider} from "./shared/Divider";
 import {ColorPickerHeader} from "../assets/ColorPickerHeader"
 import {Picker} from "./Picker";
@@ -264,7 +264,7 @@ const StyledColorInput = styled.input`
     display: flex;
     align-items: baseline;
     background-color: ${props => props.color || props.theme.colors.secondary};
-    color: ${props => props.theme.colors.badgeText};
+    color: ${props => props.theme.colors.background};
     padding: 0.2em 0.15em;
     max-height: 1.3em;
     margin: 0 0.2em;
@@ -355,7 +355,7 @@ const StyledHexInput = styled.input.attrs(() => ({
   display: flex;
   align-items: center;
   background-color: ${props => props.valid ? props.theme.colors.secondary : props.theme.colors.danger};
-  color: ${props => props.theme.colors.badgeText};
+  color: ${props => props.theme.colors.background};
   padding: 0.2em 0.3em;
   max-height: 1.3em;
   margin: 0.3em 0.3em 0.6em 0.3em;

@@ -1,3 +1,6 @@
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 # What is Warframe Color Picker?
 
 Warframe Color Picker is an easy tool designed to help you with managing your in-game fashion. If you’re a fashionframe enthusiast, this tool will be irreplaceable for you!
@@ -6,8 +9,9 @@ All models in Warframe tend to have different textures, bump maps, and other stu
 
 Lucky for all of us, we’ve made an app that lets you adjust your entire color scheme on the fly! Once you’ve adjusted a color, it’ll show a list of the closest colors to the one you want to achieve from all in-game palettes.
 
-https://avrorapolnareff.github.io/warframe-color-picker/
-![App](img/app.png)
+Here's the link! https://warframecolorpicker.app/
+
+![App](https://cdn.discordapp.com/attachments/752169119331385444/892765258681315378/unknown.png)
 
 # What are the main features?
 Here is the list of currently available most important features divided into sections, named accordingly.
@@ -58,6 +62,40 @@ Here is the list of currently available most important features divided into sec
 * (Palette Name)
   * Hover your mouse over a color to get its coordinates displayed in the palette name field (X, Y)
 
+# **How to use**
+Here's a sum up of all available tips & guides for the app!
+
+### HOW TO IMPORT FROM SCREENSHOT:
+
+![HowToImport](https://cdn.discordapp.com/attachments/752169119331385444/892780487532232824/HowToImport2.jpg)
+
+1. In order to do that, you first need to make a screenshot of your in-game scheme (using **Snip & Sketch** on Windows is pretty much enough), cropping it in the same way as shown in the picture.
+
+2. Once you've made the screenshot, please insert it in this field via CTRL+V. If it doesn't work, please save it on your PC and use **MANUAL UPLOAD** button.
+
+3. BOOM, you're done!! If you did everything right, of course.
+
 # Known issues
 
 * [Sometimes Export feature doesn't work due to AdBlock extensions (such as uBlock Origin or AdBlockPlus)](https://github.com/AvroraPolnareff/warframe-color-picker/issues/15).
+
+# Contributors ✨
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Morisabeau"><img src="https://avatars.githubusercontent.com/u/74872505?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Asta Ness</b></sub></a><br /><a href="#design-Morisabeau" title="Design">🎨</a> <a href="#content-Morisabeau" title="Content">🖋</a> <a href="#question-Morisabeau" title="Answering Questions">💬</a> <a href="#ideas-Morisabeau" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/AvroraPolnareff"><img src="https://avatars.githubusercontent.com/u/46288303?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AvroraPolnareff</b></sub></a><br /><a href="https://github.com/Avrora Polnareff/Warframe Color Picker/commits?author=AvroraPolnareff" title="Code">💻</a> <a href="#infra-AvroraPolnareff" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-AvroraPolnareff" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://www.ckylin.site/"><img src="https://avatars.githubusercontent.com/u/11648014?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CKylinMC</b></sub></a><br /><a href="#translation-CKylinMC" title="Translation">🌍</a> <a href="https://github.com/Avrora Polnareff/Warframe Color Picker/commits?author=CKylinMC" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/rokettu"><img src="https://avatars.githubusercontent.com/u/84252990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rokettu</b></sub></a><br /><a href="#translation-rokettu" title="Translation">🌍</a> <a href="#content-rokettu" title="Content">🖋</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -1,6 +1,5 @@
 import React, {ReactNode} from 'react'
-import styled, {keyframes} from "styled-components/macro"
-import grid from "../../assets/no-color-grid-small.png"
+import styled, {keyframes} from "styled-components"
 
 interface ColorCellProps {
   outline?: boolean
@@ -18,11 +17,14 @@ export const ColorCell = (
   }: ColorCellProps
 ) => {
   return (
-    <OutlineWrapper outline={outline}>
-      <StyledColorCell onClick={onClick} color={color} onContextMenu={onClick}>
-        {children}
-      </StyledColorCell>
-    </OutlineWrapper>)
+    <CellWrapper onClick={onClick}>
+      <OutlineWrapper outline={outline}>
+        <StyledColorCell color={color} onContextMenu={onClick}>
+          {children}
+        </StyledColorCell>
+      </OutlineWrapper>
+    </CellWrapper>
+  )
 }
 
 const gradient = keyframes`
@@ -43,6 +45,10 @@ const gradient = keyframes`
   }
 `
 
+const CellWrapper = styled.div`
+  z-index: 100;
+`
+
 const OutlineWrapper = styled.div<{outline?: boolean}>`
     cursor: ${props => props.outline ? "default" : "pointer"};
     display: flex;
@@ -60,11 +66,11 @@ const OutlineWrapper = styled.div<{outline?: boolean}>`
 `
 
 const StyledColorCell = styled.div.attrs<{color: string}>(({color}) => ({
-  style: {background: color !== "" ? color : `repeat center/150% url(${grid})`}
+  style: {background: color !== "" ? color : `repeat center/150% url("/images/no-color-grid-small.png")`}
 }))`
     content: " ";
     height: 1.07em;
     margin: 0.15em;
-    width: 1.21em;
+    width: 1.25em;
     border-radius: 0.55em;
 `

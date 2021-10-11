@@ -1,5 +1,5 @@
 import React, {CSSProperties, ReactNode} from "react";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 
 export const Wires = (
   {
@@ -13,7 +13,7 @@ export const Wires = (
   }
 ) => <div style={{position: 'relative'}}>
   {children}
-  <StyledWires style={style} src={src}/>
+  <StyledWires style={style} src={src} alt=""/>
 </div>
 
 const StyledWires = styled.img`

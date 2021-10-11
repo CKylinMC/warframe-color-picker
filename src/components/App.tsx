@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react';
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import {AppBar, Container, Entry} from './AppBar';
 import {ScreensSwitcher} from "./ScreensSwitcher";
 import {CurrentScreenContext, Screen} from "../providers/CurrentScreenProvider";
@@ -8,9 +8,8 @@ import {useTranslation} from "react-i18next";
 
 function App() {
   const {setScreen, screen} = useContext(CurrentScreenContext);
-  const {language, enableMOTD, setEnableMOTD} = useContext(SettingsContext);
+  const {language} = useContext(SettingsContext);
   const {t, i18n} = useTranslation();
-  const showMOTD = screen === Screen.COLOR_PICKER
   useEffect(() => {
     i18n.changeLanguage(language).catch(e => console.log(e))
   }, [language, i18n])
@@ -18,11 +17,6 @@ function App() {
     <StyledApp>
       <AppBar>
         <Container>
-          {showMOTD && enableMOTD && (
-            <Entry onClick={() => setEnableMOTD(!enableMOTD)}>
-              {enableMOTD ? t("menu.hide") : t("menu.show")} MOTD
-            </Entry>
-          )}
         </Container>
         <Container>
           <Entry
@@ -43,12 +37,17 @@ function App() {
           >
             {t("menu.languageSwitch")}
           </Entry>
-          <Entry>{t("menu.help")}</Entry>
+          <Entry><a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md" style={{textDecoration: "none", color: "inherit"}}>{t("menu.help")}</a></Entry>
         </Container>
         <Container/>
       </AppBar>
       <ScreensSwitcher/>
-      <Credentials><span>Hippothoe & Morisabeau</span></Credentials>
+      {
+        !process.env.index ?
+          <Credentials><a href="https://www.warframecolorpicker.app/">Hooray, we've gotten a new link!</a>Please follow <a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md">this guide</a> to move your old palettes.</Credentials> :
+          <Credentials><span>Hippothoe & Morisabeau</span></Credentials>
+      }
+
     </StyledApp>
   );
 }
@@ -59,6 +58,18 @@ const Credentials = styled.div`
   left: 2%;
   text-align: right;
   font-size: 1.25rem;
+
+  a {
+    color: ${({theme}) => theme.colors.link}
+  }
+`
+
+const Attention = styled.div`
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  
 `
 
 export const StyledApp = styled.div`

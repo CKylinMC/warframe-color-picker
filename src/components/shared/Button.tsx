@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components/macro"
+import styled, {css} from "styled-components"
 import Color from "color";
 
 interface ButtonProps {
@@ -17,7 +17,7 @@ export const Button = styled.div<ButtonProps>`
   background-color: ${props => props.primary && props.theme.colors.primary};
   background-color: ${props => props.success && props.theme.colors.success};
   background-color: ${props => props.warning && props.theme.colors.warning};
-  color: ${props => props.theme.colors.buttonText};
+  color: ${props => props.theme.colors.background};
   font-weight: bold;
   border: 0;
   cursor: pointer;

@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import React, {useContext, useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {Divider} from "../shared/Divider";
@@ -27,13 +27,14 @@ export const SchemeImport = () => {
   }
 
   useEffect(() => {
+    if (typeof localStorage === "undefined") return
     const colors = JSON.parse(localStorage.getItem("manualColors") ?? "{}") as string[]
     setCurrentColors(colors)
   }, [])
 
   return (
     <StyledSchemeImport>
-      <HeaderImage src={t("schemeImport.headerImage")}/>
+      <HeaderImage src={t("schemeImport.headerImage")} alt=""/>
       <DescriptionBlock>
         <Divider/>
         <Text><span>{t("schemeImport.headerText")}</span></Text>
