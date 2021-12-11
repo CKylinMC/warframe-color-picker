@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {AppBar, Container, Entry} from './AppBar';
 import {ScreensSwitcher} from "./ScreensSwitcher";
 import {CurrentScreenContext, Screen} from "../providers/CurrentScreenProvider";
-import {Language, SettingsContext} from "../../providers/SettingsProvider";
+import {Language, SettingsContext} from "../providers/SettingsProvider";
 import {useTranslation} from "react-i18next";
 
 function App() {
