@@ -53,7 +53,7 @@ function App() {
 }
 
 const getLanguageLink = (currentLanguage:Language)=>{
-  const linkbase = "https://github.com/AvroraPolnareff/warframe-color-picker/blob/feature/guidelike/docs/";
+  const linkbase = "https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/docs/";
   switch(currentLanguage){
     case Language.CHINESE:
       return linkbase+"GUIDE.CN.md"
