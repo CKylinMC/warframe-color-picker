@@ -37,14 +37,14 @@ function App() {
           >
             {t("menu.languageSwitch")}
           </Entry>
-          <Entry><a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md" style={{textDecoration: "none", color: "inherit"}}>{t("menu.help")}</a></Entry>
+          <Entry><a href={getLanguageLink(language)} style={{textDecoration: "none", color: "inherit"}}>{t("menu.help")}</a></Entry>
         </Container>
         <Container/>
       </AppBar>
       <ScreensSwitcher/>
       {
         !process.env.index ?
-          <Credentials><a href={getLanguageLink(language)}>Hooray, we've gotten a new link!</a>Please follow <a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md">this guide</a> to move your old palettes.</Credentials> :
+          <Credentials><a href="https://www.warframecolorpicker.app/">Hooray, we've gotten a new link!</a>Please follow <a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md">this guide</a> to move your old palettes.</Credentials> :
           <Credentials><span>Hippothoe & Morisabeau</span></Credentials>
       }
 
