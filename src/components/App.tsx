@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {AppBar, Container, Entry} from './AppBar';
 import {ScreensSwitcher} from "./ScreensSwitcher";
 import {CurrentScreenContext, Screen} from "../providers/CurrentScreenProvider";
-import {SettingsContext} from "../providers/SettingsProvider";
+import {Language, SettingsContext} from "../../providers/SettingsProvider";
 import {useTranslation} from "react-i18next";
 
 function App() {
@@ -44,12 +44,25 @@ function App() {
       <ScreensSwitcher/>
       {
         !process.env.index ?
-          <Credentials><a href="https://www.warframecolorpicker.app/">Hooray, we've gotten a new link!</a>Please follow <a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md">this guide</a> to move your old palettes.</Credentials> :
+          <Credentials><a href={getLanguageLink(language)}>Hooray, we've gotten a new link!</a>Please follow <a href="https://github.com/AvroraPolnareff/warframe-color-picker/blob/master/README.md">this guide</a> to move your old palettes.</Credentials> :
           <Credentials><span>Hippothoe & Morisabeau</span></Credentials>
       }
 
     </StyledApp>
   );
+}
+
+const getLanguageLink = (currentLanguage:Language)=>{
+  const linkbase = "https://github.com/AvroraPolnareff/warframe-color-picker/blob/feature/guidelike/docs/";
+  switch(currentLanguage){
+    case Language.CHINESE:
+      return linkbase+"GUIDE.CN.md"
+    // case Language.RUSSIAN:
+    //  return linkbase+"GUIDE.RU.md"
+    case Language.ENGLISH:
+    default:
+      return linkbase+"GUIDE.md"
+  }
 }
 
 const Credentials = styled.div`
