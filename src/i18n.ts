@@ -9,7 +9,7 @@ import zh_CN from "locales/zh_CN/translation.json";
 const resources = {
   en: {translation: en},
   ru: {translation: ru},
-  zh_CN: {translation: zh_CN}
+  "zh-CN": {translation: zh_CN}
 }
 
 i18n.use(initReactI18next)
